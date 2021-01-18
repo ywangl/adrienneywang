@@ -63,10 +63,26 @@
             <small>Download</small>
             cv.pdf file
           </a>
-          <a href="https://www.linkedin.com/in/adrienneywang/" class="button">
-            LinkedIn
-          </a>
-          <form action="http://formspree.io/adrienneyw1@gmail.com"><input type="email" name="_replyto"><textarea   name="body"></textarea><input type="submit" value="Send"></form>
+          <h3 class="contact-title">Contact me</h3>
+      <ul>
+        {% if site.social-github %}
+          <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+        {% else %}
+          <li class="github"><a href="https://github.com/ywangl" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        {% endif %}
+        {% if site.social-linkedin %}
+          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        {% else %}
+          <li class="linkedin"><a href="https://www.linkedin.com/in/adrienneywang/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        {% endif %}
+        {% if site.social-email %}
+          <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
+        {% else %}
+          <li class="email"><a href="mailto:adrienneyw1@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        {% endif %}
+      </ul>
+          
+          
            </aside>
       </div>
     </div>
